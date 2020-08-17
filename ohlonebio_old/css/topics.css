@@ -1,0 +1,529 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+
+#content {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.topic-container {
+  width: 460px;
+  margin-top: 20px;
+  margin-right: 30px;
+  opacity: 0.4;
+  float: left;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 10;
+}
+
+#overlay span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#modal {
+  display: none;
+  width: 700px;
+  height: 550px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -350px;
+  background-color: #FFF;
+  border-radius: 14px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  z-index: 11; /* 1px higher than the overlay layer */
+  color: #000;
+}
+
+#modal-content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+
+#modal-content #close-btn {
+  float: right;
+  position: absolute;
+  top: 14px;
+  right: 18px;
+}
+
+#modal-content p, #modal-content a {
+  margin: 0;
+}
+
+#modal-content a:hover {
+  text-decoration: none;
+}
+
+#modal-content img {
+  margin-top: 10px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.topic-head {
+  padding: 10px;
+  background: #000;
+}
+
+.topic-head h2 {
+  font-size: 18px;
+  color: white;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  white-space: nowrap;
+}
+
+.topic-contents {
+  background: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-description {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 190px;
+  padding: 10px;
+  box-shadow: inset 0px 0px 10px -1px rgba(0,0,0,0.5);
+}
+
+.topic-description span, .worksheet-btn span, .flashcard-btn span, .quiz-btn span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  }
+
+.topic-description .topic-overlay {
+  display: none;
+}
+
+/*
+.active .topic-description:hover {
+  background-color:rgba(51,153,255,0.8);
+}
+
+.topic-description:hover .topic-overlay {
+  display: block;
+}
+*/
+
+div.btns {
+  float: right;
+  width: 190px;
+  height: 180px;
+  background-color: #f1f1f1;
+}
+
+.btns ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.btns li {
+  position: relative;
+  height: 40px;
+  padding: 18px 0 2px 58px;
+  background-color: #f1f1f1;
+}
+
+.btns strong {
+  display: block;
+  font-size: 16px;
+  line-height: 0.6em;
+}
+
+.btns p {
+  display: inline;
+  font-size: 12px;
+}
+
+.btns p a {
+  position: relative;
+  z-index: 1;
+}
+
+.btns p a:hover {
+  text-decoration: underline;
+}
+
+.btns i {
+  color: #e1e1e1;
+  position: relative;
+  top: 50px;
+  left: 70px;
+}
+
+.worksheet-btn {
+  background: url('../img/worksheet.svg') 10px 0 no-repeat;
+  background-size: 40px 120px;
+}
+
+.flashcard-btn {
+  background: url('../img/flashcard.svg') 10px 0 no-repeat;
+  background-size: 40px 120px;
+
+}
+
+.quiz-btn {
+  background: url('../img/quiz.svg') 10px 0 no-repeat;
+  background-size: 40px 120px;
+}
+
+.active .btns li:hover {
+  background-color: #e1e1e1;
+/*  color: #FFF; */
+/*  background-color:rgba(51,153,255,1); */
+/*  background-position: 14px -60px; */
+}
+
+#read-more {
+  float: left;
+  position: absolute;
+  margin: 14px 18px;
+  bottom: 0;
+  right: 0;
+  color: #FFF;
+}
+
+#read-more:hover, #more-list a:hover {
+  text-decoration: underline;
+}
+
+#more-resources .topic-head {
+  background: #f1f1f1;
+}
+
+#more-resources .topic-head h2 {
+  color: black;
+}
+
+#more-list {
+  background: #f1f1f1;
+  height: 180px;
+}
+
+#more-list ul {
+  margin: 0;
+}
+
+#more-list li {
+  margin-bottom: 0.3em;
+}
+
+span.new-btn {
+  background: url('../img/new.svg') no-repeat right top;
+  background-size: 32px 32px;
+}
+
+#more-list sup.new {
+  color: #3399ff;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-decoration: none !important;
+}
+
+#topic-A01 .topic-contents {
+  background:#f1f1f1 url('../img/A01-life.jpg') -28px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-A02 .topic-contents {
+  background:#f1f1f1 url('../img/A02-molecules.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A03 .topic-contents {
+  background:#f1f1f1 url('../img/A03-cell.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A04 .topic-contents {
+  background:#f1f1f1 url('../img/A04-membrane.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A05 .topic-contents {
+  background:#f1f1f1 url('../img/A05-enzyme.gif') -40px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-A06 .topic-contents {
+  background:#f1f1f1 url('../img/A06-mitochondria.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A07 .topic-contents {
+  background:#f1f1f1 url('../img/A07-photosynthesis.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A08 .topic-contents {
+  background:#f1f1f1 url('../img/A08-mitosis.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A09 .topic-contents {
+  background:#f1f1f1 url('../img/A09-mendel.png') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-A10 .topic-contents {
+  background:#f1f1f1 url('../img/A10-drosophila.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-A11 .topic-contents {
+  background:#f1f1f1 url('../img/A11-proteinsynthesis.png') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A12 .topic-contents {
+  background:#f1f1f1 url('../img/A12-viruses.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-A13 .topic-contents {
+  background:#f1f1f1 url('../img/A13-miRNA.png') -28px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-A14 .topic-contents {
+  background:#f1f1f1 url('../img/A14-DNAtech.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B01 .topic-contents {
+  background:#f1f1f1 url('../img/B01-moths.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B02 .topic-contents {
+  background:#f1f1f1 url('../img/B02-finches.jpg') 0 0 no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B03 .topic-contents {
+  background:#f1f1f1 url('../img/B03-history.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B04 .topic-contents {
+  background:#f1f1f1 url('../img/B04-eukarya.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B05 .topic-contents {
+  background:#f1f1f1 url('../img/B05-volvox.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B06 .topic-contents {
+  background:#f1f1f1 url('../img/B06-fungi.gif') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B07 .topic-contents {
+  background:#f1f1f1 url('../img/B07-animalia.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B08 .topic-contents {
+  background:#f1f1f1 url('../img/B08-tissue.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B09 .topic-contents {
+  background:#f1f1f1 url('../img/B09-digestion.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B10 .topic-contents {
+  background:#f1f1f1 url('../img/B10-gas.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B11 .topic-contents {
+  background:#f1f1f1 url('../img/B11-circulation.jpg') -64px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B12 .topic-contents {
+  background:#f1f1f1 url('../img/B12-osmoregulation.gif') 0 -20px no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B13 .topic-contents {
+  background:#f1f1f1 url('../img/B13-hormones.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B14 .topic-contents {
+  background:#f1f1f1 url('../img/B14-reproduction.jpg') -20px center no-repeat;
+  background-size: auto 200px;
+}
+
+#topic-B15 .topic-contents {
+  background:#f1f1f1 url('../img/B15-nervous.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B16 .topic-contents {
+  background:#f1f1f1 url('../img/B16-muscle.jpg') 0 center no-repeat;
+  background-size: 270px auto;
+}
+
+#topic-B17 .topic-contents {
+  background:#f1f1f1 url('../img/B17-angiosperms.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B19 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') 0 center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-B20 .topic-contents {
+  background:#f1f1f1 url('../img/B20-ecosystems.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I01 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I02 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I03 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I04 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I05 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I06 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I07 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I08 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I09.topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I10 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I11 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I12 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I14 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I22 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I23 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I24 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I25 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I26 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I27 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I28 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I29 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I30 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
+
+#topic-I31 .topic-contents {
+  background:#f1f1f1 url('../img/B19-ecology.jpg') -24px center no-repeat;
+  background-size: auto 180px;
+}
